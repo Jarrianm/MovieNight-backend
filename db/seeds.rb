@@ -6,3 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # added this line to test my commit
+latest_movies = JSON.parse(Tmdb::Movie.latest)
+
+
+
+jarrian = User.create(name:"Jarrian", username:"JearBear", location:"NYC",
+  age:24, bio:"Lf > Chills", password_digest: "jarrian")
