@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # added this line to test my commit
-latest_movies = JSON.parse(Tmdb::Movie.latest)
+latest_movies = Tmdb::Movie.latest
 
 
 
