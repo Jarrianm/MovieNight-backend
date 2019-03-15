@@ -1,4 +1,4 @@
 class Movie < ApplicationRecord
-  belongs_to :user
-  belongs_to :intrest 
+  has_many :matchings
+  has_many :users through :matchings
 end
