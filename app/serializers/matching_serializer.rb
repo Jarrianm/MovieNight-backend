@@ -1,4 +1,4 @@
 class MatchingSerializer < ActiveModel::Serializer
-  attributes :id
-  
+  attributes :id, :show_id, :user_id
+
 end
