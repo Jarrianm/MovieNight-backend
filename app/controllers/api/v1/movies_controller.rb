@@ -1,32 +1,41 @@
 class Api::V1::MoviesController < ApplicationController
 
   def index
-    @latest = Tmdb::Movie.latest
-		@upcoming = Tmdb::Movie.upcoming
-		@now_playing = Tmdb::Movie.now_playing
-		@top_rated = Tmdb::Movie.top_rated
-		@popular = Tmdb::Movie.popular
-		render json: [latest: @latest,
-      now_playing: @now_playing, 
-      top_rated: @top_rated,
-      popular: @popular,
-      upcoming: @upcoming]
-  end
+		@movies = Movie.all
+		render json: @movies
+	end
 
-  def show
-    @movie = Movie.find(params[:id])
-    render json: @movie
-  end
+	def upcoming
+		@upcoming = Movie.all.select do |movie|
+			movie.category == 'upcoming'
+		end
+		render json: @upcoming
+	end
 
-  private
+	def now_playing
+		@now_playing = Movie.all.select do |movie|
+			movie.category == 'now_playing'
+		end
+		render json: @now_playing
+	end
 
-  def movie_params
-    params.permit(:title, :plot, :runtime,
-    :poster_img, :release_date)
-  end
+	def top_rated
+		@top_rated = Movie.all.select do |movie|
+			movie.category == 'top_rated'
+		end
+		render json: @top_rated
+	end
 
-  def find_movie
-    @movie = Movie.find(params[:id])
-  end
+	def popular
+		@popular = Movie.all.select do |movie|
+			movie.category == 'popular'
+		end
+		render json: @popular
+	end
+
+	def show
+		@movie = Movie.find_by(ref_code: params[:id])
+		render json: @movie
+	end
 
 end
