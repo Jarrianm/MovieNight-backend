@@ -1,4 +1,4 @@
 class Intrest < ApplicationRecord
   has_many :movies
-  has_many :users through :shows
+  has_many :users through :movies
 end
