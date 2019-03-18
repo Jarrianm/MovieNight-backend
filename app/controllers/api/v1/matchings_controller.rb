@@ -19,5 +19,5 @@ class Api::V1::MatchingsController < ApplicationController
   def find_matching
     @movie = Movie.find(params[:id])
   end
-  
+
 end

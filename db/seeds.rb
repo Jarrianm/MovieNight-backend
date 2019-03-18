@@ -10,5 +10,8 @@ latest_movies = Tmdb::Movie.latest
 
 
 
-jarrian = User.create(name:"Jarrian", username:"JearBear", location:"NYC",
-  age:24, bio:"Lf > Chills", password_digest: "jarrian")
+User.create!(name:"Jarrian", username:"JearBear", location:"NYC",
+  age:24, bio:"Lf > Chills", password: "jarrian")
+
+  User.create!(name:"Ben", username:"Benny", location:"Jersey",
+    age:30, bio:"bored", password: "jarrian")
