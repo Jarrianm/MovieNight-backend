@@ -5,7 +5,8 @@ Rails.application.routes.draw do
         resources :users
         resources :movies
         resources :matchings
-  		
+        post '/login', to: "auth#create"
+
       end
     end
   end

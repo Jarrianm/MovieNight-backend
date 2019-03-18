@@ -13,11 +13,11 @@ class Api::V1::UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     payload = {user_id: @user.id}
-    token = JWT.encode(payload, "#{@user.password}")
+    token = JWT.encode(payload, "learnlovecode")
     render json: {user: @user, token: token}
   end
 
-  
+
 
   private
 
