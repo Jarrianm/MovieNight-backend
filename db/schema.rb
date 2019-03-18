@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_03_14_161104) do
   enable_extension "plpgsql"
 
   create_table "matchings", force: :cascade do |t|
-    t.integer "show_id"
+    t.integer "movie_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -25,9 +25,10 @@ ActiveRecord::Schema.define(version: 2019_03_14_161104) do
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.string "plot"
-    t.string "runtime"
+    t.string "backdrop_path"
     t.string "poster_img"
     t.string "release_date"
+    t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
