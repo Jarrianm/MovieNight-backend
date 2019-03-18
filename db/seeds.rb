@@ -60,8 +60,10 @@ end
 
 
 
-User.create!(name:"Jarrian", username:"JearBear", location:"NYC",
-  age:24, bio:"Lf > Chills", password: "jarrian")
 
-  User.create!(name:"Ben", username:"Benny", location:"Jersey",
-    age:30, bio:"bored", password: "jarrian")
+jarrian = User.create!(name:"Jarrian", username:"JearBear", location:"NYC",
+  age:24, bio:"Lf > Chills", password: "jarrian10")
+ben = User.create!(name:"Ben", username:"Benny", location:"Jersey",
+    age:30, bio:"bored", password: "benny10")
+mikey = User.create!(name:"Michael", username:"Beschwa", location:"FarRock",
+    age:27, bio:"gains", password: "michael10")
