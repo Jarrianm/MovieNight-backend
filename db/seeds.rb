@@ -62,8 +62,8 @@ end
 
 
 jarrian = User.create!(name:"Jarrian", username:"JearBear", location:"NYC",
-  age:24, bio:"Lf > Chills", password: "jarrian10")
+  age:24, bio:"Lf > Chills", password: "jarrian10",profile_img: "http://i686.photobucket.com/albums/vv226/letsrollny/nyssharlemjamsession/IMG_4710_zpsxao9zsbs.jpg")
 ben = User.create!(name:"Ben", username:"Benny", location:"Jersey",
-    age:30, bio:"bored", password: "benny10")
+    age:30, bio:"bored", password: "benny10", profile_img: "https://pbs.twimg.com/profile_images/968200490071875585/NPWafTsh_400x400.jpg")
 mikey = User.create!(name:"Michael", username:"Beschwa", location:"FarRock",
-    age:27, bio:"gains", password: "michael10")
+    age:27, bio:"gains", password: "michael10", profile_img: "https://a2-images.myspacecdn.com/images03/22/092ec8f6df0b462a9cd6b45715cadb19/300x300.jpg")
