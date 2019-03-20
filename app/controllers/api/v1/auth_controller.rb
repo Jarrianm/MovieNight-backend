@@ -7,6 +7,7 @@ class Api::V1::AuthController < ApplicationController
     @user = User.find_by(username: params[:username])
         if @user && @user.authenticate(params[:password])
       token = JWT.encode({user_id: @user.id}, "learnlovecode")
+
       render json: {user: @user, token: token}
     else
       render json: {message: "STOOPID"}
@@ -14,8 +15,9 @@ class Api::V1::AuthController < ApplicationController
 end
 
 def show
-  if current_user
-    render json: {user: current_user}
+  # binding.pry
+  if current_user?
+    render json: {user: current_user?}
   else
     render json: {error: "not the current user"}
 end
