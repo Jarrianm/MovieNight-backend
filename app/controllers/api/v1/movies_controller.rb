@@ -34,8 +34,25 @@ class Api::V1::MoviesController < ApplicationController
 	end
 
 	def show
-		@movie = Movie.find_by(ref_code: params[:id])
+		@movie = Movie.find(params[:id])
 		render json: @movie
 	end
+
+  private
+
+  def movie_params
+    params.permit(:title,
+    :plot,
+    :poster_img,
+    :backdrop_path,
+    :release_date,
+    :category )
+  end
+  def find_movie
+		@movie = Movie.find(params[:id])
+		render json: @movie
+	end
+
+
 
 end

@@ -58,11 +58,13 @@ popular.results.each do |movie|
 	)
 end
 
-# Matching.create!(movie_id: Movie.find_by(id: 1).id, user_id: User.find_by(id: 1).id )
+# Matching.create!(movie_id: Movie.find_by(id: 1).id,
+# user_id: User.find_by(id: 1).id )
 
 
 jarrian = User.create!(name:"Jarrian", username:"JearBear", location:"NYC",
-  age:24, bio:"Lf > Chills", password: "jarrian10",profile_img: "http://i686.photobucket.com/albums/vv226/letsrollny/nyssharlemjamsession/IMG_4710_zpsxao9zsbs.jpg")
+  age:24, bio:"Lf > Chills", password: "jarrian10",profile_img: "http://i686.photobucket.com/albums/vv226/letsrollny/nyssharlemjamsession/IMG_4710_zpsxao9zsbs.jpg",
+	movie_id: Movie.find_by(id: 1).id)
 ben = User.create!(name:"Ben", username:"Benny", location:"Jersey",
     age:30, bio:"bored", password: "benny10", profile_img: "https://pbs.twimg.com/profile_images/968200490071875585/NPWafTsh_400x400.jpg")
 mikey = User.create!(name:"Michael", username:"Beschwa", location:"FarRock",
