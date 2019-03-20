@@ -6,7 +6,8 @@ Rails.application.routes.draw do
         resources :movies
         resources :matchings
         post '/login', to: "auth#create"
-
+        get '/current_user', to: "auth#show"
+        
       end
     end
   end

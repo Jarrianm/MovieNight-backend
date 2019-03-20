@@ -58,7 +58,7 @@ popular.results.each do |movie|
 	)
 end
 
-
+# Matching.create!(movie_id: Movie.find_by(id: 1).id, user_id: User.find_by(id: 1).id )
 
 
 jarrian = User.create!(name:"Jarrian", username:"JearBear", location:"NYC",
