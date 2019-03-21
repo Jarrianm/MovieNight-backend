@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2019_03_14_161104) do
     t.string "poster_img"
     t.string "release_date"
     t.string "category"
+    t.bigint "movie_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

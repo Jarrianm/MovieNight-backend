@@ -7,7 +7,11 @@ class CreateMovies < ActiveRecord::Migration[5.2]
       t.string :poster_img
       t.string :release_date
       t.string :category
+      t.bigint :movie_id
+      t.bigint :user_id
       t.timestamps
     end
+
+
   end
 end

@@ -1,5 +1,5 @@
 class Movie < ApplicationRecord
-  belongs_to :user
-  has_many :matchings
+has_many :users
+has_many :matchings
 
 end
