@@ -2,7 +2,7 @@
 class User < ApplicationRecord
   has_many :movies
   has_many :matchings, through: :movies
-
+  
   validates :name, presence: true
   validates :username, uniqueness: true
   validates :location, presence: true
