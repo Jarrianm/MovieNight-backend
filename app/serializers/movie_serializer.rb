@@ -3,7 +3,6 @@ class MovieSerializer < ActiveModel::Serializer
   :poster_img, :release_date, :category
 
 
-  has_many :matchings
   has_many :users, through: :matchings
 
 end
