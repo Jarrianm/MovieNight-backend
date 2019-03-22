@@ -17,7 +17,8 @@ end
 def show
   # binding.pry
   if current_user?
-    render json: {user: current_user?}
+    render json: {user: current_user? ,movies: current_user?.movies}
+    # binding.pry
   else
     render json: {error: "not the current user"}
 end

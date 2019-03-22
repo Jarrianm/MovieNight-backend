@@ -8,7 +8,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :bio
       t.string :password_digest
       t.string :profile_img
-      t.bigint :movie_id
       t.timestamps
     end
   end
