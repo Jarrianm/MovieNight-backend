@@ -6,18 +6,23 @@ class Api::V1::MatchingsController < ApplicationController
   end
 
   def show
-    @movie = Movie.find(params[:id])
-    render json: @movie
+    @matching = Matching.find(params[:id])
+    render json: @matching
   end
+
+  def create
+    @matching = Matching.create(matching_params)
+    render json: @matching
+end
 
   private
 
-  def movie_params
-    params.permit(:show_id, :user_id)
+  def matching_params
+    params.permit(:movie_id, :user_id)
   end
 
   def find_matching
-    @movie = Movie.find(params[:id])
+    @matching = Matching.find(params[:id])
   end
 
 end

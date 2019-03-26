@@ -33,10 +33,13 @@ class Api::V1::MoviesController < ApplicationController
 		render json: @popular
 	end
 
+
 	def show
 		@movie = Movie.find(params[:id])
 		render json: @movie
-	end
+end
+
+    # , each_serializer: MovieSerializer, root: false	end
 
   private
 
