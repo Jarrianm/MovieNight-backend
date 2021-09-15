@@ -25,6 +25,6 @@ PostgreSQL
 2. ‘Brew install Node’
 3. Clone this repo
 4. Navigate to the back -end directory and run 
-‘rails s’ 
+`rails s`
 5. Navigate to the front -end directory and run 
-’npm I’ & ‘npm start’
+`npm I’ & ‘npm start`
